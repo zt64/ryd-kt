@@ -16,4 +16,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "ryd-kt"
 
-include("lib")
+include("core", "client")

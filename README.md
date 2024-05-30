@@ -1,6 +1,6 @@
 # ryd-kt
 
-[![Maven Central Version](https://img.shields.io/maven-central/v/dev.zt64/ryd-kt)](https://central.sonatype.com/artifact/dev.zt64/ryd-kt)
+[![Maven Central Version](https://img.shields.io/maven-central/v/dev.zt64/ryd-kt)](https://central.sonatype.com/artifact/dev.zt64.ryd-kt/core)
 <br>
 ![badge-platform-jvm]
 ![badge-platform-js]
@@ -22,7 +22,7 @@ Using [Ktor](https://github.com/ktorio/ktor) for networking.
 rydKt = "x.y.z"
 
 [libraries]
-ryd = { module = "dev.zt64:ryd-kt", version.ref = "rydKt" }
+ryd = { module = "dev.zt64.ryd-kt:client", version.ref = "rydKt" }
 ```
 
 Make sure to replace `x.y.z` with the latest version and to add a Ktor engine to your dependencies.
@@ -31,6 +31,16 @@ Make sure to replace `x.y.z` with the latest version and to add a Ktor engine to
 
 ```kotlin
 val client = RydClient()
+val res = client.get("dQw4w9WgXcQ")
+
+println("Likes: ${res.likes}")
+println("Dislikes: ${res.dislikes}")
+
+val userId = "..."
+
+client.like(userId, videoId)
+client.dislike(userId, videoId)
+client.removeVote(userId, videoId)
 ```
 
 ## License

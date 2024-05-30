@@ -11,12 +11,7 @@ on:
       - 'gradle/**'
   pull_request:
     branches: [ main ]
-    paths:
-      - '**.kt'
-      - '**.kts'
-      - 'gradle.properties'
-      - '.github/workflows/check.yml'
-      - 'gradle/**'
+
   workflow_dispatch:
 
 concurrency:
