@@ -52,7 +52,6 @@ class RydClientTest {
                         headers = headersOf("Content-Type" to listOf("application/json"))
                     )
                 }
-
                 else -> error("Unhandled ${request.url.encodedPath}")
             }
         }
@@ -76,14 +75,12 @@ class RydClientTest {
                         headers = headersOf("Content-Type" to listOf("application/json"))
                     )
                 }
-
                 "/interact/confirmVote" -> {
                     respond(
                         content = "true",
                         headers = headersOf("Content-Type" to listOf("application/json"))
                     )
                 }
-
                 else -> error("Unhandled ${request.url.encodedPath}")
             }
         }
