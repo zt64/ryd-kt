@@ -1,17 +1,9 @@
-import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
-
 plugins {
     id("kmp-lib")
     alias(libs.plugins.kotlin.serialization)
 }
 
 kotlin {
-    @OptIn(ExperimentalWasmDsl::class)
-    wasmJs {
-        browser()
-        nodejs()
-    }
-
     sourceSets {
         commonMain {
             dependencies {

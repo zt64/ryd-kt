@@ -6,13 +6,18 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.artifacts.VersionCatalog
 import org.gradle.api.artifacts.VersionCatalogsExtension
+import org.gradle.api.provider.Property
 import org.gradle.kotlin.dsl.apply
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.getByType
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
+import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
+import org.jetbrains.kotlin.gradle.targets.js.dsl.KotlinJsSubTargetDsl
 import org.jlleitschuh.gradle.ktlint.KtlintExtension
 import java.util.*
+
+private fun <T> Property<T>.assign(value: T) = set(value)
 
 private val Project.libs
     get(): VersionCatalog = extensions.getByType<VersionCatalogsExtension>().named("libs")
@@ -24,6 +29,7 @@ class KmpLibPlugin : Plugin<Project> {
         configureMaintenance(target)
     }
 
+    @OptIn(ExperimentalWasmDsl::class)
     private fun configureKmp(target: Project) {
         target.apply(plugin = "org.jetbrains.kotlin.multiplatform")
         target.extensions.configure<KotlinMultiplatformExtension> {
@@ -32,9 +38,22 @@ class KmpLibPlugin : Plugin<Project> {
 
             jvm()
 
-            js {
-                browser()
-                nodejs()
+            listOf(js(), wasmJs()).forEach { target ->
+                fun KotlinJsSubTargetDsl.extendTimeout() {
+                    testTask {
+                        useMocha {
+                            timeout = "10s"
+                        }
+                    }
+                }
+
+                target.nodejs {
+                    extendTimeout()
+                }
+
+                target.browser {
+                    extendTimeout()
+                }
             }
 
             linuxX64()
