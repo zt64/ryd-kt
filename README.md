@@ -1,6 +1,6 @@
 # ryd-kt
 
-[![Maven Central Version](https://img.shields.io/maven-central/v/dev.zt64/ryd-kt)](https://central.sonatype.com/artifact/dev.zt64.ryd-kt/core)
+[![Maven Central Version](https://img.shields.io/maven-central/v/dev.zt64.ryd-kt/core)](https://central.sonatype.com/artifact/dev.zt64.ryd-kt/core)
 <br>
 ![badge-platform-jvm]
 ![badge-platform-js]
