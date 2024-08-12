@@ -3,6 +3,8 @@ public final class dev/zt64/ryd/RydClient : dev/zt64/ryd/RydApi {
 	public fun <init> (Lio/ktor/client/HttpClient;)V
 	public fun <init> (Lio/ktor/client/engine/HttpClientEngine;Ljava/lang/String;Ljava/lang/String;)V
 	public synthetic fun <init> (Lio/ktor/client/engine/HttpClientEngine;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun <init> (Lio/ktor/client/engine/HttpClientEngineFactory;Ljava/lang/String;Ljava/lang/String;)V
+	public synthetic fun <init> (Lio/ktor/client/engine/HttpClientEngineFactory;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public fun <init> (Ljava/lang/String;Ljava/lang/String;)V
 	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public fun dislike (Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;

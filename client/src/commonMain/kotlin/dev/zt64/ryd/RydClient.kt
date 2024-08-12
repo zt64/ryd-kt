@@ -21,7 +21,7 @@ private const val USERAGENT = "github.com/zt64/ryd-kt"
 private const val BASE64_CHARSET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
 private const val BASE_URL = "https://returnyoutubedislikeapi.com"
 
-private fun getConfig(
+private fun httpClientConfig(
     apiUrl: String,
     userAgent: String
 ): HttpClientConfig<*>.() -> Unit = {
@@ -46,13 +46,19 @@ public class RydClient(private val httpClient: HttpClient) : RydApi {
     public constructor(
         apiUrl: String = BASE_URL,
         userAgent: String = USERAGENT
-    ) : this(HttpClient(getConfig(apiUrl, userAgent)))
+    ) : this(HttpClient(httpClientConfig(apiUrl, userAgent)))
+
+    public constructor(
+        engine: HttpClientEngineFactory<*>,
+        apiUrl: String = BASE_URL,
+        userAgent: String = USERAGENT
+    ) : this(HttpClient(engine, httpClientConfig(apiUrl, userAgent)))
 
     public constructor(
         engine: HttpClientEngine,
         apiUrl: String = BASE_URL,
         userAgent: String = USERAGENT
-    ) : this(HttpClient(engine, getConfig(apiUrl, userAgent)))
+    ) : this(HttpClient(engine, httpClientConfig(apiUrl, userAgent)))
 
     override suspend fun get(videoId: String): Votes {
         return httpClient
