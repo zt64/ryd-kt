@@ -6,7 +6,7 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                implementation(projects.core)
+                api(projects.core)
 
                 implementation(libs.ktor.client.core)
                 implementation(libs.ktor.client.contentNegotiation)
