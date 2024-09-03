@@ -12,7 +12,8 @@
 ![badge-platform-tvos]
 ![badge-platform-watchos]
 
-Kotlin multiplatform client for the [Return YouTube Dislikes API](https://returnyoutubedislikeapi.com/swagger/index.html).
+Kotlin multiplatform client for
+the [Return YouTube Dislikes API](https://returnyoutubedislikeapi.com/swagger/index.html).
 Using [Ktor](https://github.com/ktorio/ktor) for networking.
 
 ## Setup
@@ -31,7 +32,7 @@ Make sure to replace `x.y.z` with the latest version and to add a Ktor engine to
 
 ```kotlin
 val client = RydClient()
-val res = client.get("dQw4w9WgXcQ")
+val res = client.getVotes("dQw4w9WgXcQ")
 
 println("Likes: ${res.likes}")
 println("Dislikes: ${res.dislikes}")

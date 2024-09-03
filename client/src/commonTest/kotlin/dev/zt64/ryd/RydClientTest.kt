@@ -61,7 +61,7 @@ class RydClientTest {
         val client = RydClient(mockEngine)
 
         data.forEach {
-            val votes = client.get(it.videoId)
+            val votes = client.getVotes(it.videoId)
             assertEquals(it.likes, votes.likes)
             assertEquals(it.dislikes, votes.dislikes)
         }

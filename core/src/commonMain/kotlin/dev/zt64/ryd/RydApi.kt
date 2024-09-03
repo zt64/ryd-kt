@@ -12,7 +12,7 @@ public interface RydApi {
      *
      * @param videoId
      */
-    public suspend fun get(videoId: String): Votes
+    public suspend fun getVotes(videoId: String): Votes
 
     /**
      * Adds a vote to a video
