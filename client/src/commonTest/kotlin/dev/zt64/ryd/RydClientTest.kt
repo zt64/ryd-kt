@@ -44,6 +44,8 @@ class RydClientTest {
                             put("id", "dQw4w9WgXcQ")
                             put("likes", 1000000)
                             put("dislikes", 1)
+                            put("rawLikes", 1000000)
+                            put("rawDislikes", 1)
                             put("dateCreated", "2023-01-01T00:00:00Z")
                             put("deleted", false)
                             put("rating", 0.999999)

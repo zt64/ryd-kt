@@ -14,6 +14,7 @@ import io.ktor.client.plugins.contentnegotiation.*
 import io.ktor.client.request.*
 import io.ktor.http.*
 import io.ktor.serialization.kotlinx.json.*
+import kotlinx.serialization.json.Json
 import kotlin.math.floor
 import kotlin.random.Random
 
@@ -26,7 +27,12 @@ private fun httpClientConfig(
     userAgent: String
 ): HttpClientConfig<*>.() -> Unit = {
     install(ContentNegotiation) {
-        json()
+        json(
+            Json {
+                // This is to prevent errors in case additional fields are added
+                ignoreUnknownKeys = true
+            }
+        )
     }
 
     install(UserAgent) {

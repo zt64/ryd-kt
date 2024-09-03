@@ -50,12 +50,14 @@ public final class dev/zt64/ryd/model/Votes {
 	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()I
 	public final fun component3 ()I
-	public final fun component4 ()Lkotlinx/datetime/Instant;
-	public final fun component5 ()Z
-	public final fun component6 ()D
-	public final fun component7 ()I
-	public final fun copy (Ljava/lang/String;IILkotlinx/datetime/Instant;ZDI)Ldev/zt64/ryd/model/Votes;
-	public static synthetic fun copy$default (Ldev/zt64/ryd/model/Votes;Ljava/lang/String;IILkotlinx/datetime/Instant;ZDIILjava/lang/Object;)Ldev/zt64/ryd/model/Votes;
+	public final fun component4 ()I
+	public final fun component5 ()I
+	public final fun component6 ()Lkotlinx/datetime/Instant;
+	public final fun component7 ()Z
+	public final fun component8 ()D
+	public final fun component9 ()I
+	public final fun copy (Ljava/lang/String;IIIILkotlinx/datetime/Instant;ZDI)Ldev/zt64/ryd/model/Votes;
+	public static synthetic fun copy$default (Ldev/zt64/ryd/model/Votes;Ljava/lang/String;IIIILkotlinx/datetime/Instant;ZDIILjava/lang/Object;)Ldev/zt64/ryd/model/Votes;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getDateCreated ()Lkotlinx/datetime/Instant;
 	public final fun getDeleted ()Z
@@ -63,6 +65,8 @@ public final class dev/zt64/ryd/model/Votes {
 	public final fun getId ()Ljava/lang/String;
 	public final fun getLikes ()I
 	public final fun getRating ()D
+	public final fun getRawDislikes ()I
+	public final fun getRawLikes ()I
 	public final fun getViewCount ()I
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;

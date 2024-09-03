@@ -7,6 +7,8 @@ import kotlinx.serialization.Serializable
  * @property id The ID of the video
  * @property likes The number of likes the video has
  * @property dislikes The number of dislikes the video has
+ * @property rawLikes The number of raw likes the video has
+ * @property rawDislikes The number of raw dislikes the video has
  * @property dateCreated The date the video was created
  * @property deleted Whether the video has been deleted
  * @property rating The rating of the video
@@ -17,6 +19,8 @@ public data class Votes internal constructor(
     val id: String,
     val likes: Int,
     val dislikes: Int,
+    val rawLikes: Int,
+    val rawDislikes: Int,
     val dateCreated: Instant,
     val deleted: Boolean,
     val rating: Double,
