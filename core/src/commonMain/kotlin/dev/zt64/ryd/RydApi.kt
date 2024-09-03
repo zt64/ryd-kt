@@ -3,6 +3,9 @@ package dev.zt64.ryd
 import dev.zt64.ryd.model.Vote
 import dev.zt64.ryd.model.Votes
 
+/**
+ * The Return YouTube Dislikes API
+ */
 public interface RydApi {
     /**
      * Gets the votes for a video

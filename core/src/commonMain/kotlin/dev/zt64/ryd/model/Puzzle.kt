@@ -6,8 +6,18 @@ import kotlin.io.encoding.Base64
 import kotlin.io.encoding.ExperimentalEncodingApi
 import kotlin.math.pow
 
+/**
+ * Represents a puzzle that must be solved to vote
+ * @property challenge The challenge to solve
+ * @property difficulty The difficulty of the puzzle
+ */
 @Serializable
 public data class Puzzle internal constructor(val challenge: String, val difficulty: Int) {
+    /**
+     * Solves the puzzle
+     *
+     * @return A base64 encoded string representing the solution
+     */
     @OptIn(ExperimentalEncodingApi::class)
     public fun solve(): String {
         val challenge = Base64.decode(challenge)
@@ -35,6 +45,12 @@ public data class Puzzle internal constructor(val challenge: String, val difficu
     }
 }
 
+/**
+ * Counts the number of leading zeroes in a byte array
+ *
+ * @param bytes The byte array to count the leading zeroes in
+ * @return The number of leading zeroes
+ */
 internal fun countLeadingZeroes(bytes: ByteArray): Int {
     var zeroes = 0
 
