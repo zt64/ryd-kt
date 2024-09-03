@@ -11,8 +11,6 @@ public final class dev/zt64/ryd/model/Puzzle {
 	public static final field Companion Ldev/zt64/ryd/model/Puzzle$Companion;
 	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()I
-	public final fun copy (Ljava/lang/String;I)Ldev/zt64/ryd/model/Puzzle;
-	public static synthetic fun copy$default (Ldev/zt64/ryd/model/Puzzle;Ljava/lang/String;IILjava/lang/Object;)Ldev/zt64/ryd/model/Puzzle;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getChallenge ()Ljava/lang/String;
 	public final fun getDifficulty ()I
@@ -56,8 +54,6 @@ public final class dev/zt64/ryd/model/Votes {
 	public final fun component7 ()Z
 	public final fun component8 ()D
 	public final fun component9 ()I
-	public final fun copy (Ljava/lang/String;IIIILkotlinx/datetime/Instant;ZDI)Ldev/zt64/ryd/model/Votes;
-	public static synthetic fun copy$default (Ldev/zt64/ryd/model/Votes;Ljava/lang/String;IIIILkotlinx/datetime/Instant;ZDIILjava/lang/Object;)Ldev/zt64/ryd/model/Votes;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getDateCreated ()Lkotlinx/datetime/Instant;
 	public final fun getDeleted ()Z

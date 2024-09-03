@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
+
 plugins {
     id("kmp-lib")
     alias(libs.plugins.kotlin.serialization)
@@ -19,5 +21,10 @@ kotlin {
                 implementation(libs.coroutines.test)
             }
         }
+    }
+
+    @OptIn(ExperimentalKotlinGradlePluginApi::class)
+    compilerOptions {
+        freeCompilerArgs.add("-Xconsistent-data-class-copy-visibility")
     }
 }
