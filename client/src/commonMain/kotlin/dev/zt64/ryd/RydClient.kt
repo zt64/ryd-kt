@@ -22,10 +22,7 @@ private const val USERAGENT = "github.com/zt64/ryd-kt"
 private const val BASE64_CHARSET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
 private const val BASE_URL = "https://returnyoutubedislikeapi.com"
 
-private fun httpClientConfig(
-    apiUrl: String,
-    userAgent: String
-): HttpClientConfig<*>.() -> Unit = {
+private fun httpClientConfig(apiUrl: String, userAgent: String): HttpClientConfig<*>.() -> Unit = {
     install(ContentNegotiation) {
         json(
             Json {
@@ -66,11 +63,10 @@ public class RydClient(private val httpClient: HttpClient) : RydApi {
         userAgent: String = USERAGENT
     ) : this(HttpClient(engine, httpClientConfig(apiUrl, userAgent)))
 
-    override suspend fun get(videoId: String): Votes {
-        return httpClient
-            .get("votes") {
-                parameter("videoId", videoId)
-            }.body<Votes>()
+    override suspend fun getVotes(videoId: String): Votes {
+        return httpClient.get("votes") {
+            parameter("videoId", videoId)
+        }.body<Votes>()
     }
 
     override suspend fun vote(
@@ -89,32 +85,22 @@ public class RydClient(private val httpClient: HttpClient) : RydApi {
         }
     }
 
-    override suspend fun like(
-        videoId: String,
-        userId: String
-    ) {
+    override suspend fun like(videoId: String, userId: String) {
         vote(videoId, userId, Vote.LIKE)
     }
 
-    override suspend fun dislike(
-        videoId: String,
-        userId: String
-    ) {
+    override suspend fun dislike(videoId: String, userId: String) {
         vote(videoId, userId, Vote.DISLIKE)
     }
 
-    override suspend fun removeVote(
-        videoId: String,
-        userId: String
-    ) {
+    override suspend fun removeVote(videoId: String, userId: String) {
         vote(videoId, userId, Vote.UNSET)
     }
 
     override suspend fun register(userId: String) {
-        val puzzle = httpClient
-            .get("puzzle/registration") {
-                parameter("userId", userId)
-            }.body<Puzzle>()
+        val puzzle = httpClient.get("puzzle/registration") {
+            parameter("userId", userId)
+        }.body<Puzzle>()
 
         val solution = puzzle.solve()
 

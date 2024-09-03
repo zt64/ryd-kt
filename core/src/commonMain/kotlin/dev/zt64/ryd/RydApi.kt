@@ -29,10 +29,7 @@ public interface RydApi {
      * @param videoId
      * @param userId
      */
-    public suspend fun like(
-        videoId: String,
-        userId: String
-    )
+    public suspend fun like(videoId: String, userId: String)
 
     /**
      * Set vote to dislike
@@ -40,10 +37,7 @@ public interface RydApi {
      * @param videoId
      * @param userId
      */
-    public suspend fun dislike(
-        videoId: String,
-        userId: String
-    )
+    public suspend fun dislike(videoId: String, userId: String)
 
     /**
      * Remove a vote from a video
@@ -51,10 +45,7 @@ public interface RydApi {
      * @param videoId
      * @param userId
      */
-    public suspend fun removeVote(
-        videoId: String,
-        userId: String
-    )
+    public suspend fun removeVote(videoId: String, userId: String)
 
     /**
      * Registers a user ID with the API
