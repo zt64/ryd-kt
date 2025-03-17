@@ -46,7 +46,7 @@ client.removeVote(userId, videoId)
 
 ## License
 
-[GPL v3.0](LICENSE)
+[MIT](LICENSE)
 
 [badge-platform-jvm]: http://img.shields.io/badge/-jvm-DB413D.svg?style=flat
 
