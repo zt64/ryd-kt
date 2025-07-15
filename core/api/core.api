@@ -19,7 +19,7 @@ public final class dev/zt64/ryd/model/Puzzle {
 	public fun toString ()Ljava/lang/String;
 }
 
-public synthetic class dev/zt64/ryd/model/Puzzle$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+public final synthetic class dev/zt64/ryd/model/Puzzle$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
 	public static final field INSTANCE Ldev/zt64/ryd/model/Puzzle$$serializer;
 	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
 	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/ryd/model/Puzzle;
@@ -68,7 +68,7 @@ public final class dev/zt64/ryd/model/Votes {
 	public fun toString ()Ljava/lang/String;
 }
 
-public synthetic class dev/zt64/ryd/model/Votes$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+public final synthetic class dev/zt64/ryd/model/Votes$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
 	public static final field INSTANCE Ldev/zt64/ryd/model/Votes$$serializer;
 	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
 	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/ryd/model/Votes;
@@ -99,7 +99,7 @@ public final class dev/zt64/ryd/model/request/RegisterRequest {
 	public fun toString ()Ljava/lang/String;
 }
 
-public synthetic class dev/zt64/ryd/model/request/RegisterRequest$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+public final synthetic class dev/zt64/ryd/model/request/RegisterRequest$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
 	public static final field INSTANCE Ldev/zt64/ryd/model/request/RegisterRequest$$serializer;
 	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
 	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/ryd/model/request/RegisterRequest;
@@ -130,7 +130,7 @@ public final class dev/zt64/ryd/model/request/VoteConfirmRequest {
 	public fun toString ()Ljava/lang/String;
 }
 
-public synthetic class dev/zt64/ryd/model/request/VoteConfirmRequest$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+public final synthetic class dev/zt64/ryd/model/request/VoteConfirmRequest$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
 	public static final field INSTANCE Ldev/zt64/ryd/model/request/VoteConfirmRequest$$serializer;
 	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
 	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/ryd/model/request/VoteConfirmRequest;
@@ -161,7 +161,7 @@ public final class dev/zt64/ryd/model/request/VoteRequest {
 	public fun toString ()Ljava/lang/String;
 }
 
-public synthetic class dev/zt64/ryd/model/request/VoteRequest$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+public final synthetic class dev/zt64/ryd/model/request/VoteRequest$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
 	public static final field INSTANCE Ldev/zt64/ryd/model/request/VoteRequest$$serializer;
 	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
 	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ldev/zt64/ryd/model/request/VoteRequest;
