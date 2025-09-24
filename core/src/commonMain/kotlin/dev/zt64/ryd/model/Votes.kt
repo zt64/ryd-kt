@@ -1,7 +1,8 @@
 package dev.zt64.ryd.model
 
-import kotlinx.datetime.Instant
 import kotlinx.serialization.Serializable
+import kotlin.time.ExperimentalTime
+import kotlin.time.Instant
 
 /**
  * @property id The ID of the video
@@ -14,6 +15,7 @@ import kotlinx.serialization.Serializable
  * @property rating The rating of the video
  * @property viewCount The number of views the video has
  */
+@OptIn(ExperimentalTime::class)
 @Serializable
 public data class Votes internal constructor(
     val id: String,

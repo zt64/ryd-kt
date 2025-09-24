@@ -50,12 +50,12 @@ public final class dev/zt64/ryd/model/Votes {
 	public final fun component3 ()I
 	public final fun component4 ()I
 	public final fun component5 ()I
-	public final fun component6 ()Lkotlinx/datetime/Instant;
+	public final fun component6 ()Lkotlin/time/Instant;
 	public final fun component7 ()Z
 	public final fun component8 ()D
 	public final fun component9 ()I
 	public fun equals (Ljava/lang/Object;)Z
-	public final fun getDateCreated ()Lkotlinx/datetime/Instant;
+	public final fun getDateCreated ()Lkotlin/time/Instant;
 	public final fun getDeleted ()Z
 	public final fun getDislikes ()I
 	public final fun getId ()Ljava/lang/String;
